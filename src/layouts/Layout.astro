@@ -16,30 +16,18 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav class="flex items-center justify-between flex-wrap bg-white p-6">
+		<nav class="flex items-center justify-between bg-white p-6">
 			<div class="flex items-center flex-shrink-0 text-black mr-6">
 			  <img class="fill-current h-10 w-10 mr-2" width="184" height="184" src='/ANTIMAPSv2.png'>
 			  <span class="font-semibold text-xl tracking-tight">antimaps</span>
 			</div>
-			<div class="block lg:hidden">
-			  <button class="flex items-center px-3 py-2 border rounded text-white border-blackhover:text-white hover:border-white">
-				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-			  </button>
-			</div>
-			<div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-			  <div class="text-sm lg:flex-grow">
-				<a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-				  Docs
-				</a>
-				<a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-				  Examples
-				</a>
-				<a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-				  Blog
-				</a>
-			  </div>
+			<div class="w-full flex lg:w-auto flex-row justify-end">
 			  <div>
-				<a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-black border-black hover:text-black hover:bg-white mt-4 lg:mt-0">Download</a>
+				<a href="#" class="lg:flex inline-flex items-center text-sm px-4 py-2 leading-none border rounded text-white bg-black border-black hover:text-black hover:bg-white mt-1 lg:mt-0">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-3 h-3 mr-1.5">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+				</svg>
+				Download</a>
 			  </div>
 			</div>
 		  </nav>
@@ -53,7 +41,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		background-color: white;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
