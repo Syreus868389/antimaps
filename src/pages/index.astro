@@ -1,26 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Typewriter from 'typewriter-effect';
+import CustomTypeWriter from '../components/CustomTypeWriter'
+import CardOnScroll from '../components/CardOnScroll'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<div class="text-4xl flex-grow text-center">
-			<Typewriter client:load
-  			options={{
-    		strings: ["l'application de navigation qui surpasse toutes les autres"],
-    		autoStart: true,
-    		loop: true,
-  			}}
-			/>
+		<div class="text-4xl flex text-left open-sans text mt-20">
+			<CustomTypeWriter client:load content_high="La meilleure app de navigation du marché." content_low="<br/>Tout simplement.">
+			</CustomTypeWriter>
+		</div>
+		<div class="mt-96">
+			<CardOnScroll client:idle content="Batterie illimitée"></CardOnScroll>
+		</div>
+		<div class="mt-52">
+			<CardOnScroll client:idle content="Batterie illimitée"></CardOnScroll>
 		</div>
 	</main>
 </Layout>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&family=Open+Sans:wght@600&display=swap');
+
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 70%;
+		max-width: 80%;
+	}
+
+	.noto {
+		font-family: 'Noto Sans Mono', monospace;;
+	}
+
+	.open-sans {
+		font-family: 'Open Sans', sans-serif;
 	}
 </style>
