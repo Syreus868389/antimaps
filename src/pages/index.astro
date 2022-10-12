@@ -6,9 +6,9 @@ import '../styles/custom.css';
 import '../styles/scroll.less';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Antimaps.">
 	<main>
-		<div class="lg:p-[2rem] md:p-[1.5rem] sm:p-[1rem] w-[87%] m-auto">
+		<div class="lg:p-[2rem] md:p-[1.5rem] sm:p-[1rem] w-[87%] m-auto over xs:h-[87rem] md:h-auto">
 		<div class="text-4xl flex text-left open-sans text mt-10 mb-20 h-14 xs:min-h-[180px] sm:min-h-0">
 			<CustomTypeWriter client:load content_high="La meilleure solution de navigation du marché." content_low="<br/>Tout simplement.">
 			</CustomTypeWriter>
@@ -32,10 +32,10 @@ import '../styles/scroll.less';
 			</span>
 		  </section>
 		<div>
-			<div class="w-full h-[35rem] bg-fixed bg-cover bg-center flex flex-col justify-center items-center bg-blue-600/70 bg-blend-multiply"
+			<div class="w-full xs:h-[50rem] md:h-[35rem] bg-fixed bg-cover bg-center flex flex-col justify-center items-center bg-blue-600/70 bg-blend-multiply"
         	style="background-image:url('/map.jpg')">
-        	<h1 class="text-white font-bold open-sans text-5xl mt-10">Retrouvez le plaisir de vous déplacer sereinement.</h1>
-			<h1 class="text-white font-bold open-sans text-3xl text-center m-10 leading-snug">
+        	<h1 class="text-white font-bold open-sans text-center xs:text-3xl md:text-5xl mt-10">Retrouvez le plaisir de vous déplacer sereinement.</h1>
+			<h1 class="text-white font-bold open-sans xs:text-xl md:text-3xl text-center m-10 leading-snug">
 				Nos concurrents vous promettent d'optimiser vos trajets et de vous faire gagner du temps, à tel point qu'il devient diffcile de savoir où l'on est et où l'on va sans ces applications.<br/> <span class="underline">Antimaps</span> vous propose d'arrêter cette dépendance, en retrouvant votre autonomie et le plaisir de se déplacer à travers la vie et le monde.
 			</h1>
 			<a href="https://boutique.ign.fr/cartes-de-tourisme-france-paris-et-ses-environs-9782758534914-2.html" class="lg:flex inline-flex items-center text-xl px-4 py-3 leading-none border rounded text-white bg-black border-black hover:border-white hover:bg-transparent mb-2 mt-1 stroke-white open-sans">
