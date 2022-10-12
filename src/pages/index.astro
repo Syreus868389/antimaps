@@ -1,38 +1,56 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CustomTypeWriter from '../components/CustomTypeWriter'
-import CardOnScroll from '../components/CardOnScroll'
+import RoundCard from '../components/RoundCard.astro';
+import '../styles/custom.css';
+import '../styles/scroll.less';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<div class="text-4xl flex text-left open-sans text mt-20">
-			<CustomTypeWriter client:load content_high="La meilleure app de navigation du marché." content_low="<br/>Tout simplement.">
+		<div class="lg:p-[2rem] md:p-[1.5rem] sm:p-[1rem] w-[87%] m-auto">
+		<div class="text-4xl flex text-left open-sans text mt-10 mb-20 h-14 xs:min-h-[180px] sm:min-h-0">
+			<CustomTypeWriter client:load content_high="La meilleure solution de navigation du marché." content_low="<br/>Tout simplement.">
 			</CustomTypeWriter>
 		</div>
-		<div class="mt-96">
-			<CardOnScroll client:idle content="Batterie illimitée"></CardOnScroll>
+		<div class="flex flex-col md:flex-row justify-between h-[20rem]">
+			<RoundCard img='/battery.png' text_title='économique' text_content='antimaps ne consomme absolument aucune batterie.' img_fill="object-cover">
+			</RoundCard>
+			<RoundCard img='/forest_path.png' text_title='agréable' text_content='parcourez les plus beaux itinéraires.' add_class="animate__delay-1s delay-half" img_fill="object-cover">
+			</RoundCard>
+			<RoundCard img='/fjord.png' text_title='fiable' text_content='fonctionne sans réseau.' add_class="animate__delay-2s delay-half" img_fill="object-cover w-full">
+			</RoundCard>
+			<RoundCard img='/bike.png' text_title='sécure' text_content='ne vous distrait pas pendant que vous circulez.' add_class="animate__delay-3s delay-half" img_fill="object-cover w-full">
+			</RoundCard>
 		</div>
-		<div class="mt-52">
-			<CardOnScroll client:idle content="Batterie illimitée"></CardOnScroll>
+		</div>
+		<section class="example example--1 mb-10 mt-2">
+			<span class="scroll-icon">
+			  <span class="scroll-icon__wheel-outer">
+				<span class="scroll-icon__wheel-inner"></span>
+			  </span>
+			</span>
+		  </section>
+		<div>
+			<div class="w-full h-[35rem] bg-fixed bg-cover bg-center flex flex-col justify-center items-center bg-blue-600/70 bg-blend-multiply"
+        	style="background-image:url('/map.jpg')">
+        	<h1 class="text-white font-bold open-sans text-5xl mt-10">Retrouvez le plaisir de vous déplacer sereinement.</h1>
+			<h1 class="text-white font-bold open-sans text-3xl text-center m-10">
+				Nos concurrents vous promettent d'optimiser vos trajets et de vous faire gagner du temps, à tel point qu'il devient diffcile de savoir où l'on est et où l'on va sans ces applications. Antimaps vous propose d'arrêter cette dépendance, en retrouvant votre autonomie et le plaisir de se déplacer à travers la vie et le monde.
+			</h1>
+			<a href="https://boutique.ign.fr/cartes-de-tourisme-france-paris-et-ses-environs-9782758534914-2.html" class="lg:flex inline-flex items-center text-xl px-4 py-3 leading-none border rounded text-white bg-black border-black hover:text-black hover:bg-white mb-2 mt-1 stroke-white hover:stroke-black open-sans">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" viewBox="0 0 24 24" class="w-4 h-4 mr-2">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+				</svg>
+				Découvrir</a>
+    		</div>
 		</div>
 	</main>
 </Layout>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&family=Open+Sans:wght@600&display=swap');
-
 	main {
 		margin: auto;
-		padding: 1.5rem;
-		max-width: 80%;
-	}
-
-	.noto {
-		font-family: 'Noto Sans Mono', monospace;;
-	}
-
-	.open-sans {
-		font-family: 'Open Sans', sans-serif;
+		max-width: 100%;
 	}
 </style>

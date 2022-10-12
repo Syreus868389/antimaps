@@ -11,7 +11,7 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -23,15 +23,26 @@ const { title } = Astro.props;
 			</div>
 			<div class="w-full flex lg:w-auto flex-row justify-end">
 			  <div>
-				<a href="#" class="lg:flex inline-flex items-center text-sm px-4 py-2 leading-none border rounded text-white bg-black border-black hover:text-black hover:bg-white mt-1 lg:mt-0">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-3 h-3 mr-1.5">
+				<a href="https://boutique.ign.fr/cartes-de-tourisme-france-paris-et-ses-environs-9782758534914-2.html" class="lg:flex inline-flex items-center text-sm px-4 py-2 leading-none border rounded text-white bg-black border-black hover:text-black hover:bg-white mt-1 lg:mt-0 stroke-white hover:stroke-black">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-3 h-3 mr-1.5">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
 				</svg>
-				Download</a>
+				Découvrir</a>
 			  </div>
 			</div>
 		  </nav>
 		<slot />
+		
+	<footer class="p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+	    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Site conçu pour le cours Prisme : déformation numérique. 2022.
+	    </span>
+	    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+	        <li>
+	            <a href="mailto:pavlovic.theo@gmail.com" class="hover:underline">Contact</a>
+	        </li>
+	    </ul>
+</footer>
+  
 	</body>
 </html>
 <style is:global>

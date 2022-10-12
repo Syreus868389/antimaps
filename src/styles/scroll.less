@@ -1,0 +1,48 @@
+// Example 1
+@keyframes scroll_1 {
+    0%   { transform: translateY(0); }
+    10%  { transform: translateY(0.5em); }
+    20%  { transform: translateY(0); }
+    30%  { transform: translateY(-0.5em); }
+    40% { transform: translateY(0); }
+  }
+
+  .example {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scroll-icon__wheel-outer {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: .3em;
+    height: 1em;
+    width: .4em;
+    margin-left: -.2em;
+    border-radius: .6em;
+    overflow: hidden;
+  }
+  
+  .scroll-icon__wheel-inner {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background: #000;
+    animation: scroll_1 4s ease-in-out infinite;
+  }
+
+  // General icon style
+.scroll-icon {
+    display: block;
+    position: relative;
+    height: 2.2em;
+    width: 1.2em;
+    border: .25em solid #000;
+    border-radius: 1em;
+  }
+  
